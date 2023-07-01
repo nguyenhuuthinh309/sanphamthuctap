@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    tools:context=".Fragment.nhanvien.ThemHoaDonActivity">
+
+    <LinearLayout
+        android:layout_height="35dp"
+        android:layout_margin="3dp"
+        android:weightSum="2"
+        android:layout_width="match_parent"
+
+        android:orientation="horizontal">
+        <TextView
+            android:layout_weight="1"
+            android:textSize="20dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Tên Sân"/>
+        <Spinner
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/spntensanedit"/>
+
+
+    </LinearLayout>
+
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/motaedit"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="20dp"
+        >
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btneditcs"
+            android:text="Sửa"
+            android:backgroundTint="@color/mau_nen"
+            android:layout_marginHorizontal="20dp"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnHuyEditcs"
+            android:text="Hủy"
+            android:backgroundTint="@color/mau_nen"
+            android:layout_marginHorizontal="20dp"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            />
+    </LinearLayout>
+</LinearLayout>

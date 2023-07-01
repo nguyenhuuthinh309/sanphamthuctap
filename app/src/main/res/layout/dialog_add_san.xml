@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="5dp"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+           android:textSize="16dp"
+            android:layout_height="match_parent"
+            android:id="@+id/tensan"
+            android:textColorHint="@color/mau_nen"
+            android:hint="Tên Sân "
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:textSize="16dp"
+            android:layout_height="match_parent"
+            android:id="@+id/vitri"
+            android:textColorHint="@color/mau_nen"
+            android:hint="Vị Trí"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:textSize="16dp"
+            android:layout_height="match_parent"
+            android:id="@+id/giasan"
+            android:textColorHint="@color/mau_nen"
+            android:hint="Giá Sân"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <LinearLayout
+
+        android:layout_margin="3dp"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:textSize="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Loại Sân"/>
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/spnloaisan"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="20dp"
+        >
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnAddSan"
+            android:text="Lưu"
+
+            android:backgroundTint="@color/mau_nen"
+            android:layout_marginHorizontal="20dp"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnHuyAddSan"
+            android:text="Hủy"
+            android:backgroundTint="@color/mau_nen"
+            android:layout_marginHorizontal="20dp"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            />
+    </LinearLayout>
+</LinearLayout>
+

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="5dp"
+    android:background="@color/teal_200"
+    android:layout_height="match_parent">
+    <LinearLayout
+
+        android:layout_margin="3dp"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="horizontal">
+        <TextView
+            android:textSize="16dp"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="5dp"
+            android:layout_height="wrap_content"
+            android:text="Sân"/>
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:id="@+id/spnsan"/>
+
+    </LinearLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:textSize="16dp"
+            android:layout_height="match_parent"
+            android:id="@+id/tinhtrang"
+            android:textColorHint="@color/mau_nen"
+            android:hint="Tình trạng"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:textSize="16dp"
+            android:layout_height="match_parent"
+            android:id="@+id/hoatdong"
+            android:textColorHint="@color/mau_nen"
+            android:hint="Hoạt Động"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="20dp"
+        >
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnAddtinhtrang"
+            android:text="Lưu"
+
+            android:backgroundTint="#D3D300"
+            android:layout_marginHorizontal="20dp"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnHuyAddTinhtrang"
+            android:text="Hủy"
+            android:backgroundTint="#D3D300"
+            android:layout_marginHorizontal="20dp"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            />
+    </LinearLayout>
+</LinearLayout>

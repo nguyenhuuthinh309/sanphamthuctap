@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+
+    <item android:title="Home">
+        <menu>
+
+
+            <item android:title="Danh Sách Nhân Viên"
+              android:icon="@drawable/ic_nhanvien"
+                android:id="@+id/dsnhanvien"/>
+            <item android:title="Danh Sách Sân"
+                android:icon="@drawable/ic_san"
+                android:id="@+id/dssan"/>
+            <item android:title="Danh Sách Loại Sân"
+                android:icon="@drawable/ic_loaisan"
+                android:id="@+id/dsloaisan"/>
+            <item android:title="Danh Sách Dịch Vụ"
+                android:icon="@drawable/ic_dichvu"
+                android:id="@+id/dsdichvu"/>
+            <item android:title="Danh Sách Tình Trạng Sân"
+                android:icon="@drawable/ic_tinhtrang"
+                android:id="@+id/dstinhtrangsan"/>
+            <item android:title="Khung Giờ"
+                android:icon="@drawable/ic_dongho"
+                android:id="@+id/khunggio"/>
+            <item android:title="Trạng Thái"
+                android:icon="@drawable/ic_trangthai"
+                android:id="@+id/trangthai"/>
+            <item android:title="List hóa đơn"
+                android:id="@+id/listhoadon"
+                android:icon="@drawable/ic_trangthai"
+                />
+            <item android:id="@+id/hoadon"
+                android:title="Hóa Đơn"
+                android:icon="@drawable/ic_hoadon"/>
+            <item android:id="@+id/baocao"
+                android:title="Báo Cáo Về Tình Trạng Sân"
+                android:icon="@drawable/ic_baocao"/>
+            <item android:id="@+id/tt"
+                android:title="Trạng Thái Sân"
+                android:icon="@drawable/lien_he_icon"/>
+            <item android:id="@+id/timkiem"
+                android:title="Tìm Kiếm Hóa Đơn"
+                android:icon="@drawable/ic_timkiem"/>
+        </menu>
+    </item>
+
+
+
+
+
+
+
+    <item android:title="Thống Kê">
+        <menu>
+            <item android:id="@+id/mDoanhThu"
+                android:title="Doanh Thu Theo Ngày"
+                android:icon="@drawable/ic_doanhthu"/>
+            <item android:id="@+id/mDoanhThuTong"
+                android:title="Tổng Doanh Thu"
+                android:icon="@drawable/ic_doanhthu"/>
+        </menu>
+    </item>
+
+
+
+    <item android:title="Người Dùng">
+        <menu>
+            <item android:id="@+id/thongtin"
+                android:icon="@drawable/ic_thongtin"
+                android:title="Thông Tin"/>
+            <item android:id="@+id/mDoiMatKhau"
+                android:icon="@drawable/ic_doimk"
+                android:title="Đổi Mật Khẩu"/>
+            <item android:title="Đăng Xuất"
+                android:icon="@drawable/ic_baseline_logout_24"
+                android:id="@+id/dangxuat"/>
+
+        </menu>
+    </item>
+
+
+</menu>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.admin.DanhSachTinhTrangfragment">
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tình Trạng Sân "
+        android:textSize="30sp"
+        android:textStyle="italic"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"
+        android:layout_marginLeft="75dp"/>
+
+    <TextView
+        android:background="@color/white"
+        android:layout_marginTop="70dp"
+        android:id="@+id/sonv"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:text="Số Lượng :"
+
+
+        android:textStyle="italic"
+        android:textColor="@color/black"
+
+        />
+
+    <ListView
+        android:background="@color/white"
+        android:layout_marginTop="90dp"
+        android:id="@+id/lis_tinhtrang"
+        android:layout_width="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_height="match_parent"/>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/float_tinhtrang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="80dp"
+        android:backgroundTint="@color/mau_nen"
+        android:src="@drawable/ic_baseline_add_24"
+        android:layout_marginRight="16dp"/>
+
+</RelativeLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="250dp"
+    android:layout_height="450dp"
+    android:orientation="vertical"
+    android:padding="5dp"
+    android:gravity="center">
+    <ImageView
+        android:id="@+id/Img_item"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:src="@drawable/img_banner2"/>
+
+    <TextView
+        android:id="@+id/tv_silde_item_TieuDe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Poly Gym"
+        android:textColor="#DC4B46"
+        android:fontFamily="@font/robito_indam"
+        android:textSize="30dp"
+        android:layout_marginBottom="10dp"
+        />
+    <TextView
+        android:id="@+id/tv_slide_item_GhiChu"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Biến tập gym thành một cách sống"
+        android:textSize="15dp"
+        android:textColor="#332828"
+        android:layout_marginBottom="2dp"
+        android:fontFamily="@font/robito_indam"/>
+    <TextView
+        android:id="@+id/tv_slide_item_GhiChu2"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="10dp"
+        android:text="Không chỉ là một buổi luyện tập mà còn là trải nghiệm"
+        android:textColor="#332828"/>
+</LinearLayout>

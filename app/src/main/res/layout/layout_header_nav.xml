@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:background="@color/mau_nen"
+
+    android:layout_height="200dp"
+    >
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_nav_avata"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="40dp"
+        android:background="@drawable/shape_avtatamd"
+        android:src="@drawable/img_avata" />
+
+    <TextView
+        android:id="@+id/tv_nav_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="70dp"
+        android:layout_toRightOf="@+id/img_nav_avata"
+        android:text="Họ Tên"
+        android:textColor="@color/white"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_nav_name"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/img_nav_avata"
+        android:text="email"
+        android:textColor="@color/white"
+        android:textSize="14dp"
+        android:id="@+id/tv_nav_chucvu"
+        android:textStyle="italic" />
+
+</RelativeLayout>

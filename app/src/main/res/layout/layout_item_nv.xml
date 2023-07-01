@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<FrameLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:background="@drawable/shape_background_item"
+        android:id="@+id/shownv"
+
+      android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:orientation="horizontal"
+        android:weightSum="7"
+        android:layout_alignParentRight="true"
+
+        android:gravity="center">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/item_pt_avata"
+            android:layout_width="55dp"
+
+
+            android:layout_height="55dp"
+            />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="5"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:textColor="@color/black"
+                android:id="@+id/item_tennv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tên Nhân Viên"
+             android:textStyle="bold"
+                android:fontFamily="@font/robito_indam"
+                android:textSize="16dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginBottom="10dp"/>
+            <TextView
+                android:layout_marginLeft="15dp"
+                android:id="@+id/item_sdtnv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/robito_indam"
+                android:textSize="14dp"
+
+                android:text="Sdt"/>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/itemsua"
+android:layout_marginTop="5dp"
+                android:background="@drawable/shape_background_item2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_edit"
+                />
+            <ImageView
+                android:layout_marginBottom="5dp"
+                android:id="@+id/itemxoa"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/shape_background_item1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+
+                android:src="@drawable/ic_delete"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>
+
+
+</LinearLayout>

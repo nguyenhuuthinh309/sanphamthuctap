@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Fragment.admin.DSNhanVienFragment">
+//toi la thinh nguahiii
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/shape_background_item2"
+        android:paddingLeft="40dp"
+        android:paddingTop="15dp"
+        android:text="Tìm Kiếm Hóa Đơn "
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="italic" />
+    <LinearLayout
+
+        android:weightSum="6"
+        android:layout_marginTop="75dp"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_margin="6dp"
+            android:layout_marginTop="5dp"
+            android:weightSum="6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:background="@drawable/shape_background_item5"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/ic_baseline_calendar_month_24"
+                android:id="@+id/imgngaytimkiem"/>
+            <TextView
+                android:textColor="@color/black"
+                android:background="@drawable/shape_background_item4"
+                android:layout_weight="4"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:text="Ngày Thuê"
+                android:textAlignment="center"
+                android:textSize="16dp"
+                android:paddingTop="5dp"
+                android:id="@+id/tvngaytimkiem"/>
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/shape_background_item5"
+                android:padding="3dp"
+                android:id="@+id/imgtimkiemngay"
+                android:src="@drawable/ic_search" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginBottom="6dp"
+            android:orientation="horizontal">
+
+            <TextView
+
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="2"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:text="Khung Giờ"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+
+            <Spinner
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:id="@+id/spntimkiemkhunggio"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/shape_background_item5"
+                android:padding="3dp"
+                android:id="@+id/imgtimkiemkhunggio"
+                android:src="@drawable/ic_search" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_margin="6dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+            <TextView
+
+                android:textColor="@color/black"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:layout_weight="2"
+                android:textSize="16dp"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:text="Trạng Thái"/>
+            <Spinner
+                android:textColor="@color/black"
+                android:layout_weight="3"
+                android:textSize="20dp"
+                android:id="@+id/spntrangthaitimkiem"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                />
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:id="@+id/timkiemtrangthai"
+                android:background="@drawable/shape_background_item5"
+                android:padding="3dp"
+                android:src="@drawable/ic_search" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <ListView
+
+        android:id="@+id/lis_timkiemhoadon"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="270dp"
+        android:background="@color/white" />
+
+
+
+</RelativeLayout>

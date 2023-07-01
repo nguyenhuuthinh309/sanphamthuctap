@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Fragment.admin.DSNhanVienFragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/shape_background_item2"
+        android:paddingLeft="40dp"
+        android:paddingTop="15dp"
+        android:text="Danh sách Sân "
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="italic" />
+    <LinearLayout
+        android:weightSum="6"
+        android:layout_marginTop="75dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <EditText
+            android:background="@drawable/shape_background_item4"
+            android:hint="Nhập Sân"
+            android:padding="10dp"
+            android:layout_weight="5"
+            android:layout_width="0dp"
+            android:layout_margin="10dp"
+            android:layout_height="45dp"/>
+        <ImageView
+            android:background="@drawable/shape_background_item5"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_margin="10dp"
+            android:padding="3dp"
+            android:src="@drawable/ic_search"
+            android:layout_height="45dp"/>
+    </LinearLayout>
+    <TextView
+        android:background="@color/white"
+        android:layout_marginTop="140dp"
+        android:id="@+id/sonv"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:text="Số Lượng :"
+
+        android:layout_marginLeft="10dp"
+        android:textStyle="italic"
+        android:textColor="@color/black"
+
+        />
+
+    <ListView
+
+        android:background="@color/white"
+        android:layout_marginTop="170dp"
+        android:id="@+id/lis_cs"
+        android:layout_width="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_height="match_parent"/>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/float_cs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="80dp"
+        android:backgroundTint="@color/mau_nen"
+        android:src="@drawable/ic_baseline_add_24"
+        android:layout_marginRight="16dp"/>
+
+</RelativeLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/code303/codequalysanbong/app/src/main/res/layout/activity_them_hoa_don.xml" value="0.35833333333333334" />
+        <entry key="..\:/code303/codequalysanbong/app/src/main/res/layout/dialog_dv_edit.xml" value="0.12056737588652482" />
+        <entry key="..\:/code303/codequalysanbong/app/src/main/res/layout/dialog_hoadon_edit.xml" value="0.25" />
+        <entry key="..\:/code303/codequalysanbong/app/src/main/res/layout/dialog_tinhtrang_edit.xml" value="0.3338541666666667" />
+        <entry key="..\:/code303/codequalysanbong/app/src/main/res/layout/dialog_tinhtrangsan.xml" value="0.3338541666666667" />
+        <entry key="..\:/code303/codequalysanbong/app/src/main/res/layout/fragment_chung.xml" value="0.16296296296296298" />
+        <entry key="..\:/code303/codequalysanbong/app/src/main/res/layout/fragment_d_s_dich_vu.xml" value="0.3182291666666667" />
+        <entry key="..\:/code303/codequalysanbong/app/src/main/res/layout/fragment_d_s_loai_san.xml" value="0.1" />
+        <entry key="..\:/code303/codequalysanbong/app/src/main/res/layout/fragment_d_s_nhan_vien.xml" value="0.1" />
+        <entry key="..\:/code303/codequalysanbong/app/src/main/res/layout/fragment_d_s_san.xml" value="0.1" />
+        <entry key="..\:/code303/codequalysanbong/app/src/main/res/layout/fragment_doi_m_k.xml" value="0.1" />
+        <entry key="..\:/code303/codequalysanbong/app/src/main/res/layout/fragment_hoa_don.xml" value="0.1" />
+        <entry key="..\:/code303/codequalysanbong/app/src/main/res/layout/fragment_khung_gio.xml" value="0.1" />
+        <entry key="..\:/code303/codequalysanbong/app/src/main/res/layout/fragment_thong_ke__doanh_thu.xml" value="0.25" />
+        <entry key="..\:/code303/codequalysanbong/app/src/main/res/layout/fragment_tinh_trangfragment.xml" value="0.3338541666666667" />
+        <entry key="..\:/code303/codequalysanbong/app/src/main/res/layout/items_tinhtrang.xml" value="0.3338541666666667" />
+        <entry key="..\:/code303/codequalysanbong/app/src/main/res/layout/layout_item_hoadon.xml" value="0.19479166666666667" />
+        <entry key="..\:/code_duan1_moinhat/codequalysanbong/app/src/main/res/drawable/ic_baseline_calendar_month_24.xml" value="0.267" />
+        <entry key="..\:/code_duan1_moinhat/codequalysanbong/app/src/main/res/layout/activity_them_hoa_don.xml" value="0.33" />
+        <entry key="..\:/code_duan1_moinhat/codequalysanbong/app/src/main/res/layout/dialog_add_nv.xml" value="0.3625" />
+        <entry key="..\:/code_duan1_moinhat/codequalysanbong/app/src/main/res/layout/dialog_add_san.xml" value="0.26358695652173914" />
+        <entry key="..\:/code_duan1_moinhat/codequalysanbong/app/src/main/res/layout/dialog_hoadon_chitiet.xml" value="0.26358695652173914" />
+        <entry key="..\:/code_duan1_moinhat/codequalysanbong/app/src/main/res/layout/dialog_hoadon_edit.xml" value="0.26358695652173914" />
+        <entry key="..\:/code_duan1_moinhat/codequalysanbong/app/src/main/res/layout/dialog_nhanvien_chitiet.xml" value="0.3625" />
+        <entry key="..\:/code_duan1_moinhat/codequalysanbong/app/src/main/res/layout/fragment_hoa_don.xml" value="0.18541666666666667" />
+        <entry key="..\:/code_duan1_moinhat/codequalysanbong/app/src/main/res/layout/fragment_tim_kiem.xml" value="0.18541666666666667" />
+        <entry key="..\:/code_duan1_moinhat/codequalysanbong/app/src/main/res/layout/layout_item_hoadon.xml" value="0.33" />
+        <entry key="..\:/duan1_84/codequalysanbong/app/src/main/res/layout/activity_man_hinh_dk.xml" value="0.19519927536231885" />
+        <entry key="..\:/duan1_84/codequalysanbong/app/src/main/res/layout/activity_man_hinh_login.xml" value="0.19519927536231885" />
+        <entry key="..\:/duan1_84/codequalysanbong/app/src/main/res/layout/activity_them_hoa_don.xml" value="0.346875" />
+        <entry key="..\:/duan1_84/codequalysanbong/app/src/main/res/layout/dialog_add_nv.xml" value="0.1762917933130699" />
+        <entry key="..\:/duan1_84/codequalysanbong/app/src/main/res/layout/dialog_hoadon_chitiet.xml" value="0.2572463768115942" />
+        <entry key="..\:/duan1_84/codequalysanbong/app/src/main/res/layout/fragment_d_s_loai_san.xml" value="0.19519927536231885" />
+        <entry key="..\:/duan1_84/codequalysanbong/app/src/main/res/layout/fragment_hoa_don.xml" value="0.22" />
+        <entry key="..\:/duan1_84/codequalysanbong/app/src/main/res/layout/fragment_listhoadon.xml" value="0.33" />
+        <entry key="..\:/duan1_84/codequalysanbong/app/src/main/res/layout/fragment_thong_ke__doanh_thu.xml" value="0.2572463768115942" />
+        <entry key="..\:/duan1_84/codequalysanbong/app/src/main/res/layout/fragment_tong_doanh_thu.xml" value="0.2572463768115942" />
+        <entry key="..\:/duan1_84/codequalysanbong/app/src/main/res/layout/layout_item_hoadon.xml" value="0.15121580547112462" />
+        <entry key="..\:/duan1_84/codequalysanbong/app/src/main/res/menu/menu_nav.xml" value="0.2638888888888889" />
+      </map>
+    </option>
+  </component>
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK" />
+</project>

@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="10dp"
+    tools:context=".Fragment.nhanvien.ThemHoaDonActivity">
+    <TextView
+        android:background="@drawable/shape_background_item2"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:text="Tạo hóa đơn"
+        android:textSize="30sp"
+
+        android:textAlignment="center"
+        android:paddingTop="15dp"
+        android:textStyle="italic"
+        android:layout_margin="5dp"
+        android:paddingLeft="20dp"
+        android:textColor="@color/black"
+        />
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:textColor="@color/black"
+
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:textSize="16dp"
+            android:layout_height="match_parent"
+            android:id="@+id/tenkh"
+            android:textColor="@color/black"
+            android:textColorHint="@color/mau_nen"
+            android:hint="Tên Khách Hàng "
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:textSize="16dp"
+            android:layout_height="match_parent"
+            android:id="@+id/sdtkh"
+            android:textColorHint="@color/mau_nen"
+            android:hint="Số Điện Thoại "
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:weightSum="5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:textColor="@color/black"
+            android:background="@drawable/shape_background_item4"
+            android:layout_weight="4"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+           android:text="Ngày Thuê"
+            android:textAlignment="center"
+            android:textSize="16dp"
+            android:paddingTop="5dp"
+             android:id="@+id/edtngaythue"/>
+        <ImageView
+            android:background="@drawable/shape_background_item5"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/ic_baseline_calendar_month_24"
+            android:id="@+id/imgngay"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+    >
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+   >
+
+    <LinearLayout
+        android:layout_height="35dp"
+android:layout_marginTop="10dp"
+        android:weightSum="5"
+        android:layout_width="match_parent"
+
+        android:orientation="horizontal">
+        <TextView
+
+            android:textColor="@color/black"
+
+
+            android:layout_weight="1"
+            android:textSize="16dp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="Khung Giờ"/>
+        <Spinner
+            android:textColor="@color/black"
+            android:layout_weight="3"
+            android:textSize="20dp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/spnkhunggio"/>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_height="35dp"
+
+           android:weightSum="5"
+        android:layout_width="match_parent"
+
+        android:orientation="horizontal">
+        <TextView
+            android:textColor="@color/black"
+            android:layout_weight="1"
+            android:textSize="16dp"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:text="Tên Sân"/>
+        <Spinner
+            android:textColor="@color/black"
+            android:layout_weight="2.5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/spntensan"/>
+        <TextView
+            android:textColor="@color/black"
+            android:id="@+id/giasan1"
+            android:layout_weight="1.5"
+            android:textSize="16dp"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:textAlignment="center"
+            android:paddingTop="5dp"
+           android:text="giá"/>
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>
+
+</LinearLayout>
+
+
+    <LinearLayout
+
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+
+        <Button
+
+            android:textColor="@color/white"
+            android:id="@+id/tongtien"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Tổng Tiền"/>
+        <TextView
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:id="@+id/texttongtien"
+            android:textSize="26dp"
+            android:textColor="@color/mau_nen"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+           />
+
+    </LinearLayout>
+    <LinearLayout
+
+        android:layout_margin="3dp"
+
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:orientation="horizontal">
+        <TextView
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Trạng Thái"/>
+        <Spinner
+            android:layout_marginStart="70dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbarSize="20dp"
+            android:id="@+id/spntrangthai1"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        >
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnAddhdd"
+            android:text="Lưu"
+
+            android:background="@drawable/shape_background_item2"
+
+            android:layout_marginHorizontal="20dp"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnHuyAddhdd"
+            android:text="Hủy"
+            android:background="@drawable/shape_background_item2"
+            android:layout_marginHorizontal="20dp"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lis_BT"
+        android:layout_width="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>
+
+

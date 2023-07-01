@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">MyApp</string>
+    <string name="open_dr">open drawer</string>
+    <string name="close_dr">close drawer</string>
+    <string-array name="Vai_tro">
+        <item>ADMIN</item>
+        <item>Nhân Viên</item>
+
+    </string-array>
+    <string-array name="Vai_tro1">
+        <item>Chưa Thanh Toán</item>
+        <item>Đã Thanh Toán</item>
+
+
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_man_hinh_dk">ManHinhDk</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+</resources>

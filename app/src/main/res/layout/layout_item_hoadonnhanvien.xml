@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+
+    <LinearLayout
+        android:layout_margin="10dp"
+        android:background="@drawable/shape_background_item"
+        android:weightSum="6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <LinearLayout
+            android:layout_margin="15dp"
+            android:layout_width="0dp"
+            android:layout_weight="5"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/item_tenkh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ten khach hang"
+
+                android:fontFamily="@font/robito_indam"
+                android:textSize="15dp"
+                android:layout_marginBottom="10dp"/>
+            <TextView
+                android:id="@+id/item_sdtkh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="sdt khach hang"
+
+                android:fontFamily="@font/robito_indam"
+                android:textSize="15dp"
+                android:layout_marginBottom="10dp"/>
+
+
+
+
+
+
+            <TextView
+                android:id="@+id/item_hdtongtien"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="tong tien"
+
+                android:fontFamily="@font/robito_indam"
+                android:textSize="15dp"
+                android:layout_marginBottom="10dp"/>
+            <TextView
+                android:id="@+id/item_hdtrangthai"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="trang thai"
+
+                android:fontFamily="@font/robito_indam"
+                android:textSize="15dp"
+                android:layout_marginBottom="10dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/itemsua"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/shape_background_item2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_edit"
+            />
+
+    </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

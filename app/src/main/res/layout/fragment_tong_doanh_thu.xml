@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Fragment.admin.DSNhanVienFragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:id="@+id/header"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/shape_background_item2"
+        android:paddingLeft="40dp"
+        android:paddingTop="15dp"
+        android:text="Tổng Doanh Thu"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="italic" />
+
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/header"
+            android:src="@drawable/anhdoanhthu"
+            android:id="@+id/imgdoanhthu"/>
+    <TextView
+        android:id="@+id/tvvanban"
+        android:layout_below="@+id/imgdoanhthu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/robito_indam"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="Tổng Doanh thu: "
+
+        android:textColor="@color/mau_nen"
+        android:textSize="25dp" />
+    <TextView
+        android:id="@+id/tv_doanhthu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:fontFamily="@font/robito_indam"
+        android:gravity="center"
+        android:textColor="@color/mau_nen"
+        android:layout_below="@+id/tvvanban"
+        android:textSize="25dp" />
+
+
+
+
+
+</RelativeLayout>
