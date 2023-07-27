@@ -68,33 +68,7 @@
 
 
 
-            <TextView
-                android:id="@+id/item_hdnuoc"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Nước"
 
-                android:fontFamily="@font/robito_indam"
-                android:textSize="15dp"
-                android:layout_marginBottom="10dp"/>
-            <TextView
-                android:id="@+id/item_hdbong"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="bong"
-
-                android:fontFamily="@font/robito_indam"
-                android:textSize="15dp"
-                android:layout_marginBottom="10dp"/>
-            <TextView
-                android:id="@+id/item_hdao"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="áo"
-
-                android:fontFamily="@font/robito_indam"
-                android:textSize="15dp"
-                android:layout_marginBottom="10dp"/>
             <TextView
                 android:id="@+id/item_hdtrangthai"
                 android:layout_width="match_parent"

@@ -21,7 +21,7 @@
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="30sp"
-        android:textStyle="italic" />
+        android:textStyle="italic|bold" />
 
 
     <LinearLayout
@@ -35,15 +35,16 @@
             android:background="@color/white"
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:src="@drawable/img_avata"/>
+            android:src="@drawable/profile"/>
 
         <TextView
             android:id="@+id/txtname"
             android:textAlignment="center"
             android:textSize="40dp"
+          android:textColor="@color/black"
             android:textStyle="italic"
-            android:text="Nguyễn Hữu Thịnh"
-            android:layout_marginTop="100dp"
+            android:text=""
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
         <TextView
@@ -51,7 +52,7 @@
             android:textAlignment="center"
             android:textSize="40dp"
             android:textStyle="italic"
-            android:text="00h"
+            android:text=""
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>

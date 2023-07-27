@@ -55,7 +55,7 @@ public class DSNhanVien extends AppCompatActivity {
         lisCs.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Dialog dialog = new Dialog(getApplication());
+                Dialog dialog = new Dialog(DSNhanVien.this);
                 dialog.setContentView(R.layout.dialog_nhanvien_chitiet);
                 nv = list.get(position);
                 TextView tennv = (TextView) dialog.findViewById(R.id.tennvchitiet);

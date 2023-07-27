@@ -27,7 +27,7 @@ import thinhnh.fpoly.myapp.csdl.DTO.NhanVien;
 import thinhnh.fpoly.myapp.csdl.data.DataBaSe;
 
 public class ManHinhLogin extends AppCompatActivity {
-
+ ImageView fb,gmail,tw;
      AppCompatButton btn_dangNhap;
      AppCompatButton taotkadmin;
     CheckBox ckluuMK;
@@ -36,14 +36,42 @@ public class ManHinhLogin extends AppCompatActivity {
     ArrayList<NhanVien> listCheckNV;
     ArrayList<Admin> listCheckHV;
     SharedPreferences sharedPreferences;
+    TextView quenmk;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
-
+        quenmk = findViewById(R.id.textView5);
+        quenmk.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(ManHinhLogin.this, "Chức Năng Đang Phát Triển", Toast.LENGTH_SHORT).show();
+            }
+        });
         spinner = findViewById(R.id.spin_mhlogin_vaitro);
         btn_dangNhap = findViewById(R.id.btn_mhlogin_dangnhap);
         edUser_login = findViewById(R.id.txt_edt_mhlogin_username);
+        fb = findViewById(R.id.imageView5);
+        fb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(ManHinhLogin.this, "Chức Năng Đang Phát Triển", Toast.LENGTH_SHORT).show();
+            }
+        });
+        gmail = findViewById(R.id.imageView6);
+        gmail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(ManHinhLogin.this, "Chức Năng Đang Phát Triển", Toast.LENGTH_SHORT).show();
+            }
+        });
+        tw = findViewById(R.id.imageView7);
+        tw.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(ManHinhLogin.this, "Chức Năng Đang Phát Triển", Toast.LENGTH_SHORT).show();
+            }
+        });
         edPass_login = findViewById(R.id.txt_edt_mhlogin_pass);
         ckluuMK=findViewById(R.id.chk_luumk);
         taotkadmin = findViewById(R.id.taotkAdmin);
@@ -63,7 +91,7 @@ public class ManHinhLogin extends AppCompatActivity {
         taotkadmin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(ManHinhLogin.this, "đăng ký chỉ dành cho Admin", Toast.LENGTH_SHORT).show();
+                Toast.makeText(ManHinhLogin.this, "Đăng Kí Chỉ Dành Cho Admin", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(ManHinhLogin.this,ManHinhDkAdmin.class);
                 startActivity(intent);
             }
@@ -87,20 +115,18 @@ public class ManHinhLogin extends AppCompatActivity {
                         listCheckHV = (ArrayList<Admin>) DataBaSe.getInstance(ManHinhLogin.this).dao_admin().CheckLogin(user, pass);
                         if(listCheckHV.size() == 1){
                             String tenHV = listCheckHV.get(0).getHoten();
-                            String emailHV = listCheckHV.get(0).getEmail();
+
 
                             String tensan = listCheckHV.get(0).getTensan();
                             int idHV = listCheckHV.get(0).getId_admin();
                             String userHV = listCheckHV.get(0).getEmail();
                             bundle.putString("tenHV", tenHV);
                             bundle.putString("idHV", String.valueOf(idHV));
-
-
                             bundle.putString("tensanHV", tensan);
 
                             bundle.putString("userHV", userHV);
                             intent.putExtras(bundle);
-                            Toast.makeText(ManHinhLogin.this, "Đăng nhập thành công", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(ManHinhLogin.this, "Đăng Nhập Thành Công", Toast.LENGTH_SHORT).show();
                             if (ckluuMK.isChecked()){
                                 editor.putString("user_name",edUser_login.getText().toString());
                                 editor.putString("pass",edPass_login.getText().toString());
@@ -134,7 +160,7 @@ public class ManHinhLogin extends AppCompatActivity {
                             startActivity(intent);
                         }
                         else {
-                            Toast.makeText(ManHinhLogin.this, "login thất bại!!!", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(ManHinhLogin.this, "Đăng Nhập Thất Bại", Toast.LENGTH_SHORT).show();
                         }
 
 
@@ -157,7 +183,7 @@ public class ManHinhLogin extends AppCompatActivity {
                             bundle.putString("sdtnv",sdt);
 
                             intent.putExtras(bundle);
-                            Toast.makeText(ManHinhLogin.this, "Đăng nhập thành công nhân viên", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(ManHinhLogin.this, "Đăng Nhập Thành Công Nhân Viên", Toast.LENGTH_SHORT).show();
                             if (ckluuMK.isChecked()){
                                 editor.putString("user_name",edUser_login.getText().toString());
                                 editor.putString("pass",edPass_login.getText().toString());
@@ -174,7 +200,7 @@ public class ManHinhLogin extends AppCompatActivity {
                             startActivity(intent);
                         }
                         else {
-                            Toast.makeText(ManHinhLogin.this, "Đăng nhập thất bại", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(ManHinhLogin.this, "Đăng Nhập Thất Bại", Toast.LENGTH_SHORT).show();
                         }
                     }
 

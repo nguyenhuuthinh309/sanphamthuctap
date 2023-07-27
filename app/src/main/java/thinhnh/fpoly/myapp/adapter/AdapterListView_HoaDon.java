@@ -93,9 +93,7 @@ public class  AdapterListView_HoaDon extends BaseAdapter {
             viewHolder.tvsdt = (TextView) view.findViewById(R.id.item_sdtkh);
             viewHolder.itemHdtensan = (TextView)  view.findViewById(R.id.item_hdtensan);
             viewHolder.itemHdkhunggio = (TextView)  view.findViewById(R.id.item_hdkhunggio);
-            viewHolder.itemHdnuoc = (TextView)  view.findViewById(R.id.item_hdnuoc);
-            viewHolder.itemHdbong = (TextView)  view.findViewById(R.id.item_hdbong);
-            viewHolder.itemHdao = (TextView)  view.findViewById(R.id.item_hdao);
+
             viewHolder.itemHdtrangthai = (TextView)  view.findViewById(R.id.item_hdtrangthai);
             viewHolder.itemHdtongtien = (TextView)  view.findViewById(R.id.item_hdtongtien);
             viewHolder.itemsua = (ImageView)  view.findViewById(R.id.itemsua);
@@ -114,7 +112,7 @@ public class  AdapterListView_HoaDon extends BaseAdapter {
 
         viewHolder.itemHdtongtien.setText("Tổng Tiền: "+hd.getTongtien());
         ViewHolder finalViewHolder = viewHolder;
-        if(viewHolder.itemHdtrangthai.getText().toString().equals("Chua thanh toan")){
+        if(viewHolder.itemHdtrangthai.getText().toString().equals("Chưa Thanh Toán")){
             viewHolder.itemHdtrangthai.setTextColor(color);
         }else{
             viewHolder.itemHdtrangthai.setTextColor(colorxanh);

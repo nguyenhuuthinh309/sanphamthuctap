@@ -34,32 +34,19 @@ public class ThongTin extends AppCompatActivity {
         dangxuat =findViewById(R.id.dangxuat);
 
 
+        Bundle bundle = getIntent().getExtras();
+        String permission = bundle.getString("value");
+        if(permission.equalsIgnoreCase("ADMIN")){
 
+            txtname.setText(getIntent().getStringExtra("tenHV"));
+            txtsdt.setText(getIntent().getStringExtra("userHV"));
+
+        }else if(permission.equalsIgnoreCase("Nhân Viên")){
+
+
+        }
 //
 
-        dangxuat.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                AlertDialog.Builder builder = new AlertDialog.Builder(ThongTin.this);
-                builder.setTitle("Thông báo!");
-                builder.setMessage("Bạn có chắc chắn muốn đăng xuất không?");
-                builder.setPositiveButton("Có", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        startActivity(new Intent(ThongTin.this, ManHinhLogin.class));
-                        finish();
-                    }
-                });
-                builder.setNegativeButton("Không", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-
-                    }
-                });
-                AlertDialog alertDialog = builder.create();
-                alertDialog.show();
-            }
-        });
 
 
 

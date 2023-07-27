@@ -86,9 +86,7 @@ public class AdapterListView_HoaDonNhanVien extends BaseAdapter {
 
             viewHolder.itemHdtensan = (TextView)  view.findViewById(R.id.item_hdtensan);
             viewHolder.itemHdkhunggio = (TextView)  view.findViewById(R.id.item_hdkhunggio);
-            viewHolder.itemHdnuoc = (TextView)  view.findViewById(R.id.item_hdnuoc);
-            viewHolder.itemHdbong = (TextView)  view.findViewById(R.id.item_hdbong);
-            viewHolder.itemHdao = (TextView)  view.findViewById(R.id.item_hdao);
+
             viewHolder.itemHdtrangthai = (TextView)  view.findViewById(R.id.item_hdtrangthai);
             viewHolder.itemHdtongtien = (TextView)  view.findViewById(R.id.item_hdtongtien);
             viewHolder.itemsua = (ImageView)  view.findViewById(R.id.itemsua);

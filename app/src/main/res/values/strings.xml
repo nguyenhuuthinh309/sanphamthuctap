@@ -13,6 +13,18 @@
 
 
     </string-array>
+    <string-array name="Vai_tro2">
+        <item>Chưa Có Sân</item>
+
+
+
+    </string-array>
+    <string-array name="Vai_tro3">
+        <item>Chưa Có Giờ</item>
+
+
+
+    </string-array>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_man_hinh_dk">ManHinhDk</string>

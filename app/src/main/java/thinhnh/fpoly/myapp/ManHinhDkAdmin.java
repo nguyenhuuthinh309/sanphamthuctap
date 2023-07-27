@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputEditText;
 
@@ -54,6 +55,7 @@ public class ManHinhDkAdmin extends AppCompatActivity {
                 admin = new Admin(emaill,matkhauu,hotenn,tensann);
                 //Add hv vào database
                 DataBaSe.getInstance(ManHinhDkAdmin.this).dao_admin().insertad(admin);
+                Toast.makeText(ManHinhDkAdmin.this, "Đăng Ký Thành Công", Toast.LENGTH_SHORT).show();
                 finish();
             }
         });
@@ -61,6 +63,7 @@ public class ManHinhDkAdmin extends AppCompatActivity {
         btnhuydk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Toast.makeText(ManHinhDkAdmin.this, "Đã Hủy", Toast.LENGTH_SHORT).show();
               finish();
             }
         });

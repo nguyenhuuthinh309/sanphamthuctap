@@ -69,7 +69,7 @@ ThemHoaDonActivity extends AppCompatActivity {
      Button btnHuyAddhdd;
      ImageView timkiemhoadon;
     ListView lv_BT;
-    ArrayList<San> listsan = new ArrayList<>();
+    ArrayList<San> listsan;
     ArrayList<KhungGio> listkhunggio = new ArrayList<>();
 
 
@@ -109,9 +109,16 @@ ThemHoaDonActivity extends AppCompatActivity {
 
 
 
-        SimpleAdapter simpleAdapter1 = new SimpleAdapter(this, getDSSan(), android.R.layout.simple_list_item_1, new String[]{"tensan"}, new int[]{android.R.id.text1});
-        spntensan.setAdapter(simpleAdapter1);
 
+
+        if(getDSSan().size()==0) {
+            ArrayAdapter<CharSequence> adapter1 = ArrayAdapter.createFromResource(this,
+                    R.array.Vai_tro2, android.R.layout.simple_spinner_item);
+            adapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            spntensan.setAdapter(adapter1);
+        }else {
+                    SimpleAdapter simpleAdapter1 = new SimpleAdapter(this, getDSSan(), android.R.layout.simple_list_item_1, new String[]{"tensan"}, new int[]{android.R.id.text1});
+        spntensan.setAdapter(simpleAdapter1);
 
         spntensan.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -121,6 +128,7 @@ ThemHoaDonActivity extends AppCompatActivity {
                 String giasan = (String) hssan.get("giasan");
                 int giasan1 = Integer.parseInt(giasan);
                 giasanset.setText(giasan1+"vnd");
+
             }
 
             @Override
@@ -128,23 +136,34 @@ ThemHoaDonActivity extends AppCompatActivity {
 
             }
         });
-        SimpleAdapter simpleAdapter2 = new SimpleAdapter(this, getDSKhungGio(), android.R.layout.simple_list_item_1, new String[]{"khunggio"}, new int[]{android.R.id.text1});
-        spnkhunggio.setAdapter(simpleAdapter2);
+        }
+        if(getDSKhungGio().size()==0) {
+            ArrayAdapter<CharSequence> adapter12 = ArrayAdapter.createFromResource(this,
+                    R.array.Vai_tro3, android.R.layout.simple_spinner_item);
+            adapter12.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            spnkhunggio.setAdapter(adapter12);
+        }else {
+            SimpleAdapter simpleAdapter2 = new SimpleAdapter(this, getDSKhungGio(), android.R.layout.simple_list_item_1, new String[]{"khunggio"}, new int[]{android.R.id.text1});
+            spnkhunggio.setAdapter(simpleAdapter2);
 
 
 
-        imgngay.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Calendar calendar = Calendar.getInstance();
-                myear = calendar.get(Calendar.YEAR);
-                mmonth = calendar.get(Calendar.MONTH);
-                mday = calendar.get(Calendar.DAY_OF_MONTH);
-                DatePickerDialog dialog = new DatePickerDialog(ThemHoaDonActivity.this
-                        , 0, mdatetungay, myear, mmonth, mday);
-                dialog.show();
-            }
-        });
+            imgngay.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Calendar calendar = Calendar.getInstance();
+                    myear = calendar.get(Calendar.YEAR);
+                    mmonth = calendar.get(Calendar.MONTH);
+                    mday = calendar.get(Calendar.DAY_OF_MONTH);
+                    DatePickerDialog dialog = new DatePickerDialog(ThemHoaDonActivity.this
+                            , 0, mdatetungay, myear, mmonth, mday);
+                    dialog.show();
+                }
+            });
+        }
+
+
+
 //        timkiemhoadon.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View view) {
@@ -205,7 +224,6 @@ ThemHoaDonActivity extends AppCompatActivity {
                 String t =  tenkh.getText().toString();
                 String a = sdtkh.getText().toString();
                 String b = edtngaythue.getText().toString();
-                String c = spnkhunggio.getSelectedItem().toString();
 
                 String tenkh1 = tenkh.getText().toString();
                 String sdtkh1 = sdtkh.getText().toString();
@@ -215,50 +233,59 @@ ThemHoaDonActivity extends AppCompatActivity {
 
 
 
+if (getDSSan().size()>0) {
+    HashMap<String, Object> hs1 = (HashMap<String, Object>) spntensan.getSelectedItem();
+    int masan = (int) hs1.get("masan");
 
-                HashMap<String, Object> hs1 = (HashMap<String, Object>) spntensan.getSelectedItem();
-                int masan = (int) hs1.get("masan");
+    String tensan = (String) hs1.get("tensan");
+    String giasan = (String) hs1.get("giasan");
 
-                String tensan = (String) hs1.get("tensan");
-                String giasan = (String) hs1.get("giasan");
+    int giasan1 = Integer.parseInt(giasan);
 
-                int giasan1 = Integer.parseInt(giasan);
-
-                int tongtientatca1 =  giasan1;
-                texttongtien.setText(String.valueOf(tongtientatca1));
-
-                HashMap<String, Object> hs2 = (HashMap<String, Object>) spnkhunggio.getSelectedItem();
-                int makg = (int) hs2.get("makhunggio");
-                String khunggio = (String) hs2.get("khunggio");
+    int tongtientatca1 = giasan1;
+    texttongtien.setText(String.valueOf(tongtientatca1));
+if (getDSKhungGio().size()>0){
+    HashMap<String, Object> hs2 = (HashMap<String, Object>) spnkhunggio.getSelectedItem();
+    int makg = (int) hs2.get("makhunggio");
+    String khunggio = (String) hs2.get("khunggio");
 
 
-                listhoadon = (ArrayList<HoaDon>) DataBaSe.getInstance(getApplicationContext()).dao_hoadon().checkadd(tensan,edtngay,khunggio);
-                if(listhoadon.isEmpty()){
-                     if(a.trim().isEmpty()){
-                        Toast.makeText(ThemHoaDonActivity.this, "Bạn chưa nhập tên khách hàng xin hãy nhập?", Toast.LENGTH_SHORT).show();
-                    }else if(a.length()<9||a.length()>13||a.matches(reg)){
-                        Toast.makeText(ThemHoaDonActivity.this, "Không đúng định dạng số điện thoại vui lòng kiểm tra lại!", Toast.LENGTH_SHORT).show();
-                    }
-                    else if(t.trim().isEmpty()){
-                        Toast.makeText(ThemHoaDonActivity.this, "Bạn chưa nhập số điện thoại  khách hàng xin hãy nhập?", Toast.LENGTH_SHORT).show();
-                    }else if(b.trim().isEmpty()){
-                        Toast.makeText(ThemHoaDonActivity.this, "Bạn chưa chọn ngày cho hóa đơn xin hãy chọn?", Toast.LENGTH_SHORT).show();
-                    }else{
-                        hd = new HoaDon(tenkh1, sdtkh1, masan, tensan, giasan, makg, khunggio,tongtientatca1, edtngay);
-                        //Add hv vào database
-                        DataBaSe.getInstance(getApplicationContext()).dao_hoadon().insertHOADON(hd);
-                        //View list hv lên màn hình
-                        // Khởi tạo Fragment
-                         Intent intent = new Intent(ThemHoaDonActivity.this, LichDatSan.class);
-                         startActivity(intent);
-                    }
+    listhoadon = (ArrayList<HoaDon>) DataBaSe.getInstance(getApplicationContext()).dao_hoadon().checkadd(tensan, edtngay, khunggio);
+    if (listhoadon.isEmpty()) {
+        if (getDSKhungGio().size() == 0) {
+            Toast.makeText(ThemHoaDonActivity.this, "Bạn Cần Thiết Lập Khung Giờ Trước", Toast.LENGTH_SHORT).show();
+        } else if (getDSSan().size() == 0) {
+            Toast.makeText(ThemHoaDonActivity.this, "Bạn Cần Thiết Lập Sân Trước", Toast.LENGTH_SHORT).show();
+        } else if (a.trim().isEmpty()) {
+            Toast.makeText(ThemHoaDonActivity.this, "Bạn chưa nhập tên khách hàng xin hãy nhập?", Toast.LENGTH_SHORT).show();
+        } else if (a.length() < 9 || a.length() > 13 || a.matches(reg)) {
+            Toast.makeText(ThemHoaDonActivity.this, "Không đúng định dạng số điện thoại vui lòng kiểm tra lại!", Toast.LENGTH_SHORT).show();
+        } else if (t.trim().isEmpty()) {
+            Toast.makeText(ThemHoaDonActivity.this, "Bạn chưa nhập số điện thoại  khách hàng xin hãy nhập?", Toast.LENGTH_SHORT).show();
+        } else if (b.trim().isEmpty()) {
+            Toast.makeText(ThemHoaDonActivity.this, "Bạn chưa chọn ngày cho hóa đơn xin hãy chọn?", Toast.LENGTH_SHORT).show();
+        }
+       else {
+            hd = new HoaDon(tenkh1, sdtkh1, masan, tensan, giasan, makg, khunggio, tongtientatca1, edtngay);
+            //Add hv vào database
+            DataBaSe.getInstance(getApplicationContext()).dao_hoadon().insertHOADON(hd);
+            //View list hv lên màn hình
+            // Khởi tạo Fragment
+            Intent intent = new Intent(ThemHoaDonActivity.this, LichDatSan.class);
+            startActivity(intent);
+        }
+    }else {
+        Toast.makeText(ThemHoaDonActivity.this, "Sân đã đặt vui lòng kiểm tra lại: ", Toast.LENGTH_SHORT).show();
 
-                }else{
-                    Toast.makeText(ThemHoaDonActivity.this, "Sân đã đặt vui lòng kiểm tra lại: ", Toast.LENGTH_SHORT).show();
-                }
+    }
+    } else {
+    Toast.makeText(ThemHoaDonActivity.this, "Bạn Cần Thiết Lập Khung Giờ", Toast.LENGTH_SHORT).show();
+    }
 
-                //set thuộc tính HV
-
+    //set thuộc tính HV
+}else{
+    Toast.makeText(ThemHoaDonActivity.this, "Bạn Cần Thiết Lập Sân ", Toast.LENGTH_SHORT).show();
+}
             }
         });
 

@@ -82,6 +82,7 @@ public class DSSan extends AppCompatActivity {
                         String giasan1 = giasan.getText().toString();
 
 
+                        list1.add(new San("Sân Mẫu","0","00",Image_to_bye(imageView)));
 
 
                         //set thuộc tính HV

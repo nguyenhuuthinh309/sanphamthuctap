@@ -1,14 +1,20 @@
 package thinhnh.fpoly.myapp;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+
+import java.util.ArrayList;
 
 import thinhnh.fpoly.myapp.ACtyviti.DSNhanVien;
 import thinhnh.fpoly.myapp.ACtyviti.DSSan;
@@ -19,12 +25,13 @@ import thinhnh.fpoly.myapp.ACtyviti.LichDatSan;
 import thinhnh.fpoly.myapp.ACtyviti.ThongTin;
 import thinhnh.fpoly.myapp.ACtyviti.TimKiem;
 import thinhnh.fpoly.myapp.csdl.DTO.Admin;
+import thinhnh.fpoly.myapp.csdl.DTO.NhanVien;
 import thinhnh.fpoly.myapp.csdl.data.DataBaSe;
 
 public class ManHinhAdmin  extends AppCompatActivity{
 
 
-
+EditText timkiem1;
     private TextView an2, tennguoidung;
     private ImageView anhnguoidung;
 
@@ -37,7 +44,7 @@ public class ManHinhAdmin  extends AppCompatActivity{
     private LinearLayout tinhtrang;
     private LinearLayout khunggio;
     private LinearLayout trangthai;
-    private LinearLayout mDoanhThu;
+    private LinearLayout doimk, dangxuat, mDoanhThu;
 
     private LinearLayout an1, lichsan;
 
@@ -49,11 +56,43 @@ public class ManHinhAdmin  extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.homeadmin);
-        Admin admin;
+
         tennguoidung = (TextView) findViewById(R.id.tennguoidung);
+
+        dangxuat =findViewById(R.id.dangxuat);
+        dangxuat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(ManHinhAdmin.this);
+                builder.setTitle("Thông báo!");
+                builder.setMessage("Bạn có chắc chắn muốn đăng xuất không?");
+                builder.setPositiveButton("Có", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        startActivity(new Intent(ManHinhAdmin.this, ManHinhLogin.class));
+                        finish();
+                    }
+                });
+                builder.setNegativeButton("Không", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                });
+                AlertDialog alertDialog = builder.create();
+                alertDialog.show();
+            }
+        });
+
         an2 = (TextView) findViewById(R.id.an2);
 
-
+        timkiem1 =  findViewById(R.id.timkiem1);
+        timkiem1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(ManHinhAdmin.this, "Chức Năng Đang Phát Triển", Toast.LENGTH_SHORT).show();
+            }
+        });
         anhnguoidung = (ImageView) findViewById(R.id.anhnguoidung);
         hoadonhomnay = (LinearLayout) findViewById(R.id.hoadonhomnay);
         dsnhanvien = (LinearLayout) findViewById(R.id.dsnhanvien);
@@ -114,8 +153,7 @@ timkiemhoadon.setOnClickListener(new View.OnClickListener() {
    anhnguoidung.setOnClickListener(new View.OnClickListener() {
        @Override
        public void onClick(View view) {
-           Intent intent = new Intent(ManHinhAdmin.this, ThongTin.class);
-           startActivity(intent);
+           Toast.makeText(ManHinhAdmin.this, "Đang Phát Triển Thông Tin Người Dùng", Toast.LENGTH_SHORT).show();
        }
    });
 
@@ -137,26 +175,20 @@ timkiemhoadon.setOnClickListener(new View.OnClickListener() {
 
         if(permission.equalsIgnoreCase("ADMIN")){
 
-
-
+        tennguoidung.setText(getIntent().getStringExtra("tenHV"));
 
         }else if(permission.equalsIgnoreCase("Nhân Viên")){
-
+            tennguoidung.setText(getIntent().getStringExtra("tennv"));
       dsnhanvien.setVisibility(View.INVISIBLE);
 
        mDoanhThu.setVisibility(View.INVISIBLE);
-
-an1.setVisibility(View.INVISIBLE);
+dangxuat.setVisibility(View.VISIBLE);
+dssan.setVisibility(View.INVISIBLE);
+khunggio.setVisibility(View.INVISIBLE);
 an2.setVisibility(View.INVISIBLE);
         }
 
     }
-
-
-    private void showDialogLogout(){
-
-    }
-
 
 
 

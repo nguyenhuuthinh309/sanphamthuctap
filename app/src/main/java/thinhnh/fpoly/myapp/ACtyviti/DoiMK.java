@@ -50,11 +50,11 @@ public class DoiMK extends AppCompatActivity {
                     if (oldPass.equals(admin.getMatkhau())) {
                         admin.setMatkhau(newPass);
                         DataBaSe.getInstance(DoiMK.this).dao_admin().updataad(admin);
-                        Toast.makeText(DoiMK.this, "Đổi mật khẩu thành công", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(DoiMK.this, "Đổi Mật Khẩu Thành Công", Toast.LENGTH_SHORT).show();
                         a.setText("Đổi mật khẩu thành công");
 
                     } else {
-                        Toast.makeText(DoiMK.this ,"Mật khẩu cũ không đúng", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(DoiMK.this ,"Mật Khẩu Cũ Không Đúng", Toast.LENGTH_SHORT).show();
                         a.setText("Mật khẩu cũ không đúng");
                     }
                 } else if (permission.equalsIgnoreCase("Nhân Viên")) {
@@ -64,10 +64,10 @@ public class DoiMK extends AppCompatActivity {
                     if (oldPass.equals(nhanVien.getMk_NV())) {
                         nhanVien.setMk_NV(newPass);
                         DataBaSe.getInstance(DoiMK.this).dao_nv().updataNV(nhanVien);
-                        Toast.makeText(DoiMK.this, "Đổi mật khẩu thành công", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(DoiMK.this, "Đổi Mật Khẩu Thành Công", Toast.LENGTH_SHORT).show();
 
                     } else {
-                        Toast.makeText(DoiMK.this, "Mật khẩu cũ không đúng", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(DoiMK.this, "Mật khẩu Cũ Không Đúng", Toast.LENGTH_SHORT).show();
                     }
                 }
 

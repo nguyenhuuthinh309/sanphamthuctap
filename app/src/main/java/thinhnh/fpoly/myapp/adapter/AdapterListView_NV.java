@@ -75,6 +75,7 @@ public class AdapterListView_NV extends BaseAdapter {
             viewHolder.itemsua = (ImageView)  convertView.findViewById(R.id.itemsua);
             viewHolder.itemxoa = (ImageView)  convertView.findViewById(R.id.itemxoa);
 
+
             convertView.setTag(viewHolder);
         } else {
             viewHolder = (ViewHolder) convertView.getTag();
